@@ -12,9 +12,13 @@ hintJS is a DOM extension but it also provides a jQuery extension
 document.getElementById("element2hint").hint("Im a hint text");
 document.getElementById("element2hint").hint("Im a hint text", {"hintColor" : "#f00", "textColor": "#0f0"});
 
+document.getElementsByClassName("elements2hint").hint("Im a hint text", {"hintColor" : "#f00", "textColor": "#0f0"});
+
 // jQuery usage
 $("#element2hint").hint("Im a hint text using jQuery");
+$(".elements2hint").hint("Im a hint text using jQuery");
 $("#element2hint").hint("Im a hint text using jQuery", {"hintColor" : "#f00", "textColor": "#0f0"});
+
 ```
 
 ## License
