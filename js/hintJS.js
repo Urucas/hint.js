@@ -15,7 +15,7 @@ Element.prototype.hint = function(hintString, hintConfig) {
 
 	hintConfig = hintConfig || { hintColor: "#b6b6b6", textColor: "#000000" };
 
-	this.value = hintString;
+	this.value = this.value == "" ? hintString : this.value;
 	this.style.color = hintConfig.hintColor; 
 	this.onfocus = function() {
 		if(this.value == hintString) {
@@ -31,6 +31,14 @@ Element.prototype.hint = function(hintString, hintConfig) {
 	}
 };
 
+NodeList.prototype.hint = function(hintString, hintConfig) {
+	for(var i=0;i<this.length;i++){
+		if(this.item(i) instanceof Element) {
+			this.item(i).hint(hintString, hintConfig);
+		}
+	}	
+};
+
 // jQuery extension
 try {
 	jQuery.fn.hint = function(hintString, hintConfig) {
@@ -41,4 +49,5 @@ try {
 		return this;
 	}
 }catch(e) {}
+
 
