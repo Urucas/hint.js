@@ -3,6 +3,8 @@ hintJS
 
 A simple javacript hint extension for HTMLInputElement["text"] elements
 
+## Demo
+<a href="http://urucas.github.io/hint.js/">http://urucas.github.io/hint.js/</a>.
 
 Usage
 =====
