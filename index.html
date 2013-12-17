@@ -49,7 +49,18 @@
 <span class="nx">$</span><span class="p">(</span><span class="s2">"#element2hint"</span><span class="p">).</span><span class="nx">hint</span><span class="p">(</span><span class="s2">"Im a hint text using jQuery"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"hintColor"</span> <span class="o">:</span> <span class="s2">"#f00"</span><span class="p">,</span> <span class="s2">"textColor"</span><span class="o">:</span> <span class="s2">"#0f0"</span><span class="p">});</span>
 
 </pre></div>
+	<h2>Example</h2>
+	<div>
+		<label style="width:180px; display:inline-block;">Inputs with hints are cooler!</label><input type="text" id="element2hint" /><br />
+		<label style="width:180px; display:inline-block;">...and any color you want</label><input type="text" id="element2hint2" />
+	</div>
+	<script src="hintJS.js"></script>
+	<script>
+		document.getElementById("element2hint").hint("Im a hint text");
+		document.getElementById("element2hint2").hint("Im a hint text", {"hintColor" : "#f00", "textColor": "#0f0"});
 
+	</script>
+	<br />
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
