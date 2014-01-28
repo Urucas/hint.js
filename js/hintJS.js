@@ -9,9 +9,10 @@
 // input[type="text"] hint extension
 Element.prototype.hint = function(hintString, hintConfig) {
 
-	if(!(this instanceof HTMLInputElement && this.getAttribute("type") == "text")) {
-		return;
-	}
+	if(!(this instanceof HTMLInputElement && this.getAttribute("type") == "text")
+		&& !(this instanceof HTMLTextAreaElement)) {
+				return;
+		}
 
 	hintConfig = hintConfig || { hintColor: "#b6b6b6", textColor: "#000000" };
 
