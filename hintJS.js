@@ -15,6 +15,10 @@ Element.prototype.hint = function(hintString, hintConfig) {
 		}
 
 	hintConfig = hintConfig || { hintColor: "#b6b6b6", textColor: "#000000" };
+	if(hintString instanceof Object) {
+		hintConfig = hintString;
+		hintString = undefined;
+	}
 
 	if(hintString == undefined) {
 		try {
@@ -23,6 +27,7 @@ Element.prototype.hint = function(hintString, hintConfig) {
 			hintString = "";
 		}
 	}
+
 
 	this.value = this.value == "" ? hintString : this.value;
 	this.style.color = hintConfig.hintColor; 
