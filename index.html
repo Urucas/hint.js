@@ -31,7 +31,7 @@
         <h1>
 <a name="hintjs" class="anchor" href="#hintjs"><span class="octicon octicon-link"></span></a>hintJS</h1>
 
-<p>A simple javacript hint extension for HTMLInputElement["text"] elements</p>
+<p>A simple javacript hint extension for HTMLInputElement["text"], TextAreaElement elements</p>
 
 <h1>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
@@ -52,13 +52,14 @@
 	<h2>Example</h2>
 	<div>
 		<label style="width:180px; display:inline-block;">Inputs with hints are cooler!</label><input type="text" id="element2hint" /><br />
-		<label style="width:180px; display:inline-block;">...and any color you want</label><input type="text" id="element2hint2" />
+		<label style="width:180px; display:inline-block;">...and any color you want</label><input type="text" id="element2hint2" /><br />
+		<label style="width:180px; display:inline-block;">...and using title attribute</label><input type="text" id="element2hintTitle" title="I'm a hint text from title attribute" />
 	</div>
 	<script src="hintJS.js"></script>
 	<script>
 		document.getElementById("element2hint").hint("Im a hint text");
 		document.getElementById("element2hint2").hint("Im a hint text", {"hintColor" : "#f00", "textColor": "#0f0"});
-
+		document.getElementById("element2hintTitle").hint({"hintColor" : "#00f", "textColor": "#000"});
 	</script>
 	<br />
 <h2>
